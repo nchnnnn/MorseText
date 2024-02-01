@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorseText</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1> Text To Morse Code</h1>
+        <div class="container">
+            <div class="input-container">
+                <h2>Text</h2>
+                <textarea id="text" oninput="TxtToMorse(this)"  cols="10" rows="10"></textarea>
+            </div>
+
+            <div class="input-container">
+                <h2>Morse</h2>
+                <textarea id="morse" oninput="MorseToTxt(this)" cols="10" rows="10"></textarea>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
