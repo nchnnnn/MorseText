@@ -55,7 +55,8 @@ function TxtToMorse(txt) {
 }
 
 function MorseToTxt(morseArea) {
-    const morseCode = morseArea.value.trim().toUpperCase(); 
+
+    const morseCode = morseArea.value.trim().toUpperCase().replace("-", "-").replace(".", "·"); 
     const words = morseCode.split("   "); // Split into words based on triple spaces
     const output = words.map(word => word.split(" ").map(char => text[char] || "").join("")).join(" ");
     textArea.value = output
