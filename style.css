@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  
     /* border: 3px solid red; */
 }
 
@@ -13,11 +12,17 @@ body {
 
 main {
     padding: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 main h1 {
+    position: relative;
     text-align: center;
     margin-top: 3rem;
+    font-size: 2rem;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -73,6 +78,19 @@ h2 {
 }
 
 
+select {
+    font-size: 2rem;
+    color: white;
+    padding: .3rem;
+    border-radius: .5rem;
+    background-color: #242424;
+}
+
+
+
+
+
+
 @media (max-width: 600px) {
     main h1{
         margin-top: 1rem;
@@ -88,4 +106,18 @@ h2 {
     }
 
 
+}
+
+footer {
+    background-color: #171717;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.5rem;
 }
