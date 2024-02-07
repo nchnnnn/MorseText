@@ -4,6 +4,10 @@
     margin: 0;
     /* border: 3px solid red; */
 }
+@font-face {
+    font-family: "Baybayin";
+    src: url(TintangBaybayin.otf);
+}
 
 body {
     background-color: #171717;
@@ -21,7 +25,7 @@ main {
 main h1 {
     position: relative;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     font-size: 2rem;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +33,7 @@ main h1 {
 
 
 .container {
+    position: relative;
     width: 100%;
     margin-top: 5rem;
     display: flex;
@@ -54,11 +59,12 @@ main h1 {
     all: unset;
     width: 100%;
     height: 15rem;
-    padding: .5rem;
+    padding: .8rem;
     border-radius: .5rem;
     color: aliceblue;
     background-color: #2d2d2de4;
     font-size: 1.5rem;
+
 }
 
 textarea:focus {
@@ -71,19 +77,49 @@ h2 {
     top: -1.5rem;
     color: white;
     font-size: 1rem;
-    left: 0;
+
     font-family:monospace;
     font-weight: bolder;
     z-index: 999;
+    text-align: center;
+}
+#hidden{
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    
 }
 
+h3 {
+    padding: .5rem;
+    background-color: #242424;
+    border-radius: .4rem;
+    color: white;
+    letter-spacing: .3rem
 
+
+}
+.ei:after {
+    content: '\1701';
+    font-family: baybayin;
+}
+
+.ou::after{
+    content: '\1702';
+    font-family: baybayin;
+
+}
 select {
     font-size: 2rem;
     color: white;
     padding: .3rem;
+
     border-radius: .5rem;
     background-color: #242424;
+    cursor: pointer;
+    text-align: center;
 }
 
 
@@ -103,6 +139,10 @@ select {
     .container textarea {
         height: 30vh;
         margin: 0;
+        display: flex;
+        
+        
+        
     }
 
 
@@ -110,6 +150,7 @@ select {
 
 footer {
     background-color: #171717;
+    
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
@@ -120,4 +161,22 @@ footer {
 .icon {
     width: 1.6rem;
     height: 1.5rem;
+    fill: rgb(95, 95, 95);
+    transform: translateY(0);
+    transition: all .2s ease;
+    
+}
+
+.icon:hover {
+    fill: rgb(132, 132, 132);
+}
+
+a {
+    transition: all .2s ease;
+}
+
+
+a:hover {
+    transform: translateY(-.3rem);
+    
 }
