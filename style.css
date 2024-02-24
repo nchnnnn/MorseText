@@ -9,9 +9,13 @@
     src: url(TintangBaybayin.otf);
 }
 
+
 body {
     background-color: #171717;
 
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 main {
